@@ -14,6 +14,7 @@ host.before(tabs,status,result); host.id='map-statistics-panel';host.setAttribut
 const format = value => new Intl.NumberFormat('ru-RU').format(value);
 function show(index, focus=false){
  const map=data.maps[index];
+
  result.replaceChildren();
  const kills = map.teams.map(team => team.players.reduce((sum, player) => sum + Number(player.kda.split('/')[0]), 0));
  map.teams.forEach((team, teamIndex) => {
@@ -37,8 +38,20 @@ function show(index, focus=false){
   });
  });
  const duration=document.querySelector('[data-map-duration]');if(duration){duration.previousElementSibling.textContent='ДЛИТЕЛЬНОСТЬ КАРТЫ №'+map.number;duration.textContent=map.duration;}
+ // URL updates must never prevent rendering (some file viewers reject replaceState).
+ try { const address=new URL(location.href); address.searchParams.delete('map'); address.hash='match-statistics?map='+map.number; history.replaceState(null,'',address.href); } catch (_) {}
  if(focus)tabs.children[index].focus();
 }
 data.maps.forEach((map,i)=>{const button=document.createElement('button');button.type='button';button.className='map-tab';button.id='map-tab-'+i;button.setAttribute('role','tab');button.setAttribute('aria-controls',host.id);button.textContent='КАРТА '+map.number;button.addEventListener('click',()=>show(i));button.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight')next=(i+1)%count;if(event.key==='ArrowLeft')next=(i+count-1)%count;if(event.key==='Home')next=0;if(event.key==='End')next=count-1;if(next!==undefined){event.preventDefault();show(next,true);}});tabs.append(button);});
-show(0);
+function openFromUrl(){
+ const hashParams=new URLSearchParams(location.hash.split('?')[1] || '');
+ const requested=Number(hashParams.get('map') || new URLSearchParams(location.search).get('map'));
+ const index=data.maps.findIndex(map=>map.number===requested);
+ show(index>=0?index:0);
+ if(location.hash.startsWith('#match-statistics')) requestAnimationFrame(()=>document.querySelector('#match-statistics').scrollIntoView({block:'start',behavior:'instant'}));
+}
+openFromUrl();
+window.addEventListener('load',()=>{if(location.hash.startsWith('#match-statistics')) document.querySelector('#match-statistics').scrollIntoView({block:'start',behavior:'instant'});},{once:true});
+window.addEventListener('popstate',openFromUrl);
+window.addEventListener('hashchange',openFromUrl);
 })();

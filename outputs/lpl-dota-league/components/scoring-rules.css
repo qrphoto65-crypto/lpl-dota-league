@@ -8,3 +8,12 @@
 .rules-text-link:hover{background:rgba(128,40,62,.11);border-color:var(--red)}
 .rules-text-link span{font-size:19px;line-height:1}
 @media(prefers-reduced-motion:reduce){.rules-text-link{transition:none}}
+
+/* Compact editorial regulation action above the tables. */
+.rules-topbar{display:flex;justify-content:flex-end;margin:0 0 20px}
+.rules-topbar .rules-text-link{display:inline-flex;align-items:center;gap:16px;min-height:44px;padding:11px 16px;border:1px solid rgba(128,40,62,.2);border-left:3px solid var(--red);border-radius:6px;background:rgba(250,250,249,.88);color:var(--red);font:500 11px/1.4 'DM Mono',monospace;letter-spacing:.07em;box-shadow:0 3px 12px rgba(12,12,13,.035);transition:transform .18s,background .18s,box-shadow .18s}
+.rules-topbar .rules-text-link::before{content:'';display:block;width:12px;height:15px;flex-shrink:0;border:1px solid currentColor;border-radius:2px;background:repeating-linear-gradient(to bottom,transparent 0 3px,currentColor 3px 4px,transparent 4px 6px) center/6px 10px no-repeat;opacity:.8}
+.rules-topbar .rules-text-link:hover{transform:translateY(-2px);background:rgba(128,40,62,.07);box-shadow:0 6px 16px rgba(128,40,62,.09)}
+@media(prefers-reduced-motion:reduce){.rules-topbar .rules-text-link{transition:none}.rules-topbar .rules-text-link:hover{transform:none}}
+
+.rules-topbar .rules-text-link{font-family:'Roboto Condensed',Arial,sans-serif;font-size:14px;font-weight:700;line-height:1.2;letter-spacing:.06em;text-transform:uppercase}
