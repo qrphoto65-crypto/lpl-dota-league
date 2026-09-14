@@ -1,0 +1,479 @@
+{
+  "score": [
+    2,
+    1
+  ],
+  "maps": [
+    {
+      "number": 1,
+      "duration": "40:12",
+      "teams": [
+        {
+          "name": "TEAM 38 mint",
+          "players": [
+            {
+              "slug": "38-mint",
+              "nick": "38 mint",
+              "captain": true,
+              "hero": "Juggernaut",
+              "kda": "12/3/18",
+              "networth": 28000,
+              "damage": 38280,
+              "received": 14200,
+              "role": "core",
+              "gpm": 710,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "on3l1f3",
+              "nick": "On3L1f3",
+              "captain": false,
+              "hero": "Storm Spirit",
+              "kda": "7/5/15",
+              "networth": 24340,
+              "damage": 28850,
+              "received": 14830,
+              "role": "core",
+              "gpm": 605,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "baba-gnida",
+              "nick": "BABA GNIDA",
+              "captain": false,
+              "hero": "Mars",
+              "kda": "2/6/18",
+              "networth": 19840,
+              "damage": 22470,
+              "received": 16880,
+              "role": "core",
+              "gpm": 494,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "scissorscissors",
+              "nick": "scissorscissors",
+              "captain": false,
+              "hero": "Rubick",
+              "kda": "1/5/25",
+              "networth": 14310,
+              "damage": 11710,
+              "received": 9550,
+              "role": "support",
+              "gpm": 356,
+              "supportGold": 2400,
+              "wardsDestroyed": 7
+            },
+            {
+              "slug": "andryusha",
+              "nick": "Андрюша♡",
+              "captain": false,
+              "hero": "Crystal Maiden",
+              "kda": "1/6/22",
+              "networth": 13720,
+              "damage": 10140,
+              "received": 9250,
+              "role": "support",
+              "gpm": 341,
+              "supportGold": 2800,
+              "wardsDestroyed": 9
+            }
+          ]
+        },
+        {
+          "name": "TEAM QYRBINATOR",
+          "players": [
+            {
+              "slug": "qyrbinator",
+              "nick": "QYRBINATOR",
+              "captain": true,
+              "hero": "Ember Spirit",
+              "kda": "9/7/7",
+              "networth": 23530,
+              "damage": 30210,
+              "received": 16240,
+              "role": "core",
+              "gpm": 585,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "dirizher",
+              "nick": "Дирижер_Шлюх",
+              "captain": false,
+              "hero": "Luna",
+              "kda": "5/6/11",
+              "networth": 25410,
+              "damage": 27220,
+              "received": 15910,
+              "role": "core",
+              "gpm": 632,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "doc-hudson",
+              "nick": "Doc Hud$on",
+              "captain": false,
+              "hero": "Tidehunter",
+              "kda": "1/8/14",
+              "networth": 18520,
+              "damage": 19810,
+              "received": 16950,
+              "role": "core",
+              "gpm": 461,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "s1rota",
+              "nick": "s1rota",
+              "captain": false,
+              "hero": "Lion",
+              "kda": "1/7/16",
+              "networth": 14690,
+              "damage": 12400,
+              "received": 11030,
+              "role": "support",
+              "gpm": 365,
+              "supportGold": 2500,
+              "wardsDestroyed": 8
+            },
+            {
+              "slug": "fancyyashood",
+              "nick": "FancyyashooD",
+              "captain": false,
+              "hero": "Oracle",
+              "kda": "1/7/15",
+              "networth": 13670,
+              "damage": 9300,
+              "received": 9150,
+              "role": "support",
+              "gpm": 340,
+              "supportGold": 2900,
+              "wardsDestroyed": 10
+            }
+          ]
+        }
+      ],
+      "winnerTeamIndex": 0
+    },
+    {
+      "number": 2,
+      "duration": "38:46",
+      "teams": [
+        {
+          "name": "TEAM 38 mint",
+          "players": [
+            {
+              "slug": "38-mint",
+              "nick": "38 mint",
+              "captain": true,
+              "hero": "Phantom Assassin",
+              "kda": "7/8/11",
+              "networth": 24700,
+              "damage": 23100,
+              "received": 17400,
+              "role": "core",
+              "gpm": 620,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "on3l1f3",
+              "nick": "On3L1f3",
+              "captain": false,
+              "hero": "Puck",
+              "kda": "9/7/16",
+              "networth": 25410,
+              "damage": 31660,
+              "received": 16050,
+              "role": "core",
+              "gpm": 655,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "baba-gnida",
+              "nick": "BABA GNIDA",
+              "captain": false,
+              "hero": "Axe",
+              "kda": "4/8/19",
+              "networth": 20710,
+              "damage": 24660,
+              "received": 18270,
+              "role": "core",
+              "gpm": 534,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "scissorscissors",
+              "nick": "scissorscissors",
+              "captain": false,
+              "hero": "Hoodwink",
+              "kda": "2/7/26",
+              "networth": 14930,
+              "damage": 12850,
+              "received": 10340,
+              "role": "support",
+              "gpm": 385,
+              "supportGold": 2850,
+              "wardsDestroyed": 9
+            },
+            {
+              "slug": "andryusha",
+              "nick": "Андрюша♡",
+              "captain": false,
+              "hero": "Jakiro",
+              "kda": "3/8/23",
+              "networth": 14330,
+              "damage": 11120,
+              "received": 10010,
+              "role": "support",
+              "gpm": 370,
+              "supportGold": 3250,
+              "wardsDestroyed": 11
+            }
+          ]
+        },
+        {
+          "name": "TEAM QYRBINATOR",
+          "players": [
+            {
+              "slug": "qyrbinator",
+              "nick": "QYRBINATOR",
+              "captain": true,
+              "hero": "Queen of Pain",
+              "kda": "11/9/8",
+              "networth": 24570,
+              "damage": 33160,
+              "received": 17570,
+              "role": "core",
+              "gpm": 634,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "dirizher",
+              "nick": "Дирижер_Шлюх",
+              "captain": false,
+              "hero": "Medusa",
+              "kda": "7/8/12",
+              "networth": 26520,
+              "damage": 29880,
+              "received": 17220,
+              "role": "core",
+              "gpm": 684,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "doc-hudson",
+              "nick": "Doc Hud$on",
+              "captain": false,
+              "hero": "Centaur Warrunner",
+              "kda": "3/10/15",
+              "networth": 19330,
+              "damage": 21740,
+              "received": 18340,
+              "role": "core",
+              "gpm": 499,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "s1rota",
+              "nick": "s1rota",
+              "captain": false,
+              "hero": "Shadow Shaman",
+              "kda": "2/9/17",
+              "networth": 15330,
+              "damage": 13610,
+              "received": 11940,
+              "role": "support",
+              "gpm": 395,
+              "supportGold": 2950,
+              "wardsDestroyed": 10
+            },
+            {
+              "slug": "fancyyashood",
+              "nick": "FancyyashooD",
+              "captain": false,
+              "hero": "Dazzle",
+              "kda": "2/9/16",
+              "networth": 14270,
+              "damage": 10210,
+              "received": 9900,
+              "role": "support",
+              "gpm": 368,
+              "supportGold": 3350,
+              "wardsDestroyed": 12
+            }
+          ]
+        }
+      ],
+      "winnerTeamIndex": 1
+    },
+    {
+      "number": 3,
+      "duration": "42:18",
+      "teams": [
+        {
+          "name": "TEAM 38 mint",
+          "players": [
+            {
+              "slug": "38-mint",
+              "nick": "38 mint",
+              "captain": true,
+              "hero": "Sven",
+              "kda": "18/4/14",
+              "networth": 29840,
+              "damage": 42610,
+              "received": 18200,
+              "role": "core",
+              "gpm": 705,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "on3l1f3",
+              "nick": "On3L1f3",
+              "captain": false,
+              "hero": "Invoker",
+              "kda": "10/6/19",
+              "networth": 26750,
+              "damage": 35180,
+              "received": 17450,
+              "role": "core",
+              "gpm": 632,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "baba-gnida",
+              "nick": "BABA GNIDA",
+              "captain": false,
+              "hero": "Centaur Warrunner",
+              "kda": "5/7/22",
+              "networth": 21800,
+              "damage": 27400,
+              "received": 19860,
+              "role": "core",
+              "gpm": 515,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "scissorscissors",
+              "nick": "scissorscissors",
+              "captain": false,
+              "hero": "Rubick",
+              "kda": "3/6/29",
+              "networth": 15720,
+              "damage": 14280,
+              "received": 11240,
+              "role": "support",
+              "gpm": 372,
+              "supportGold": 3100,
+              "wardsDestroyed": 11
+            },
+            {
+              "slug": "andryusha",
+              "nick": "Андрюша♡",
+              "captain": false,
+              "hero": "Oracle",
+              "kda": "4/7/26",
+              "networth": 15080,
+              "damage": 12360,
+              "received": 10880,
+              "role": "support",
+              "gpm": 357,
+              "supportGold": 3500,
+              "wardsDestroyed": 13
+            }
+          ]
+        },
+        {
+          "name": "TEAM QYRBINATOR",
+          "players": [
+            {
+              "slug": "qyrbinator",
+              "nick": "QYRBINATOR",
+              "captain": true,
+              "hero": "Shadow Fiend",
+              "kda": "12/8/11",
+              "networth": 25860,
+              "damage": 36840,
+              "received": 19100,
+              "role": "core",
+              "gpm": 611,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "dirizher",
+              "nick": "Дирижер_Шлюх",
+              "captain": false,
+              "hero": "Luna",
+              "kda": "8/7/15",
+              "networth": 27920,
+              "damage": 33200,
+              "received": 18720,
+              "role": "core",
+              "gpm": 660,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "doc-hudson",
+              "nick": "Doc Hud$on",
+              "captain": false,
+              "hero": "Mars",
+              "kda": "4/9/18",
+              "networth": 20350,
+              "damage": 24160,
+              "received": 19940,
+              "role": "core",
+              "gpm": 481,
+              "supportGold": 0,
+              "wardsDestroyed": 0
+            },
+            {
+              "slug": "s1rota",
+              "nick": "s1rota",
+              "captain": false,
+              "hero": "Lion",
+              "kda": "3/8/20",
+              "networth": 16140,
+              "damage": 15120,
+              "received": 12980,
+              "role": "support",
+              "gpm": 382,
+              "supportGold": 3200,
+              "wardsDestroyed": 12
+            },
+            {
+              "slug": "fancyyashood",
+              "nick": "FancyyashooD",
+              "captain": false,
+              "hero": "Crystal Maiden",
+              "kda": "3/8/19",
+              "networth": 15020,
+              "damage": 11340,
+              "received": 10760,
+              "role": "support",
+              "gpm": 355,
+              "supportGold": 3600,
+              "wardsDestroyed": 14
+            }
+          ]
+        }
+      ],
+      "winnerTeamIndex": 0
+    }
+  ]
+}

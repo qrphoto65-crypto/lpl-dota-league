@@ -10,6 +10,40 @@
     "received": "18 200",
     "points": "+225",
     "quote": "«Фармите, сука, а не бегайте 5 на 5 на 15 минуте.»",
-    "demo": true
+    "demo": true,
+    "maps": [
+      {
+        "kills": 12,
+        "deaths": 3,
+        "assists": 18,
+        "gpm": 710,
+        "networth": 28000,
+        "damage": 38280,
+        "received": 14200
+      },
+      {
+        "kills": 7,
+        "deaths": 8,
+        "assists": 11,
+        "gpm": 620,
+        "networth": 24700,
+        "damage": 23100,
+        "received": 17400
+      },
+      {
+        "kills": 18,
+        "deaths": 4,
+        "assists": 14,
+        "gpm": 705,
+        "networth": 29840,
+        "damage": 42610,
+        "received": 18200
+      }
+    ],
+    "averageKda": 5.333333333333333,
+    "averageGpm": 678.3333333333334,
+    "averageNetworth": 27513.333333333332,
+    "averageDamage": 34663.333333333336,
+    "averageReceived": 16600
   }
 ]
