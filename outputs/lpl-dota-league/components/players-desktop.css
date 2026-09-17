@@ -1,0 +1,24 @@
+@media(min-width:769px){
+ main.shell.players-page .players-carousel{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px!important;max-width:none;width:100%;overflow:visible;margin:0;padding:0;touch-action:auto;border-radius:0}
+ main.shell.players-page .players-carousel .player-mini{position:relative;grid-area:auto;display:flex!important;flex-direction:column;align-items:stretch;justify-content:flex-start;width:100%!important;min-width:0;padding:10px;gap:0;margin:0;opacity:1!important;visibility:visible!important;pointer-events:auto;transform:none!important;cursor:pointer;border:1px solid #e4dfe0;border-radius:12px;background:rgba(250,250,249,.94);box-shadow:0 4px 14px #23101707;overflow:hidden;animation:roster-grid-enter .9s cubic-bezier(.16,1,.3,1) backwards;animation-delay:calc(var(--roster-order,0) * 65ms);transition:translate .3s ease,box-shadow .3s ease,border-color .3s ease}
+ main.shell.players-page .players-carousel .player-mini:before{content:attr(data-roster-number);position:absolute;z-index:1;left:17px;top:17px;display:grid;place-items:center;width:30px;height:30px;background:#80283e;color:#fff;border:1px solid #ffffff66;border-radius:5px;font:500 12px 'DM Mono',monospace;box-shadow:0 2px 8px #0002}
+ main.shell.players-page .players-carousel .player-avatar{width:100%!important;height:auto!important;aspect-ratio:1;object-fit:contain!important;object-position:center;background:transparent!important;border-radius:7px;filter:none;transition:filter .3s ease}
+ main.shell.players-page .players-carousel .player-mini-content{padding:16px 3px 6px;position:relative}
+ main.shell.players-page .players-carousel .player-mini-content:before{content:'';position:absolute;top:0;left:3px;width:28px;height:3px;background:var(--red);transition:width .3s ease}
+ main.shell.players-page .players-carousel h2{font-size:clamp(16px,1.65vw,23px)!important;line-height:1.15;margin:0 0 16px;white-space:nowrap;letter-spacing:-.025em}
+ main.shell.players-page .players-carousel .profile-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 8px;padding-top:12px;border-top:1px solid #e6dfe1}
+ main.shell.players-page .players-carousel dt{font-family:'DM Mono',monospace;font-size:9px;line-height:1.5;font-weight:400;letter-spacing:0;color:#777}
+ main.shell.players-page .players-carousel dd{font-size:23px;font-variant-numeric:tabular-nums;line-height:1.1;margin:4px 0 0}
+ main.shell.players-page .players-carousel .player-mini:hover,main.shell.players-page .players-carousel .player-mini:focus-visible{translate:0 -6px;box-shadow:0 14px 28px #80283e1a;border-color:#a56375}
+ main.shell.players-page .players-carousel .player-mini:hover .player-mini-content:before,main.shell.players-page .players-carousel .player-mini:focus-visible .player-mini-content:before{width:calc(100% - 6px)}
+ main.shell.players-page .players-carousel .player-mini:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+ @keyframes roster-grid-enter{from{filter:opacity(0);translate:0 20px}to{filter:opacity(1);translate:0 0}}
+}
+@media(min-width:769px) and (max-width:1199px){
+ main.shell.players-page .players-carousel{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px!important}
+ main.shell.players-page .players-carousel h2{font-size:22px!important}
+}
+@media(min-width:769px) and (prefers-reduced-motion:reduce){
+ main.shell.players-page .players-carousel .player-mini{animation:none;transition:none}
+ main.shell.players-page .players-carousel .player-mini-content:before{transition:none}
+}
