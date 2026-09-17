@@ -1,0 +1,181 @@
+.mobile-menu-toggle,.mobile-menu{display:none}
+@media(max-width:768px){
+html body{min-width:0}
+body>header{height:72px!important;position:relative;z-index:100}
+body>header .top{width:calc(100% - 32px)!important;height:72px;display:flex!important;flex-wrap:nowrap!important;gap:12px}
+body>header .top>nav{display:none!important}
+body>header .logo{flex-shrink:0;gap:8px}
+body>header .header-season,body>header .header-season-teaser{margin:0!important;font-size:20px!important;white-space:nowrap}
+body>header .header-season-popup{display:none!important}
+.mobile-menu-toggle{display:flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;flex-shrink:0;margin-left:auto;border:0;background:transparent;color:var(--ink);padding:10px;cursor:pointer;z-index:1002}
+.mobile-menu-toggle span{width:24px;height:2px;background:currentColor;transition:transform .25s,opacity .2s}
+.mobile-menu-toggle[aria-expanded=true]{position:fixed;top:14px;right:16px;color:white}
+.mobile-menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.mobile-menu-toggle[aria-expanded=true] span:nth-child(2){opacity:0}
+.mobile-menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:flex;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.58);align-items:center;justify-content:center;padding:72px 24px;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;overflow-y:auto}
+.mobile-menu.is-open{opacity:1;visibility:visible}
+.mobile-menu nav{display:flex!important;position:static!important;flex-direction:column;gap:8px;margin:auto;width:min(100%,340px);padding:24px;background:#f5f5f4;border:1px solid #ddd;border-radius:16px}
+.mobile-menu nav a{display:flex;align-items:center;min-height:52px;padding:10px 14px;color:var(--ink);font:600 21px/1.3 'Roboto Condensed',Arial,sans-serif;text-decoration:none;opacity:0;transform:translateY(12px);transition:opacity .2s,transform .2s}
+.mobile-menu.is-open nav a{opacity:1;transform:none;transition-delay:calc(var(--menu-index) * 45ms)}
+.mobile-menu nav a.active{background:#eee3e6;color:var(--red);border-radius:6px}
+.mobile-menu nav a:after{display:none!important}
+body .shell{width:calc(100% - 32px)!important;max-width:100%;min-width:0}
+main.shell{padding-top:24px!important}
+main.shell *,main.shell *:before,main.shell *:after{box-sizing:border-box}
+main.shell section,main.shell article,main.shell div{min-width:0}
+main.shell h1{font-size:clamp(30px,8vw,48px)!important;line-height:1.08!important;letter-spacing:-.025em;max-width:100%}
+main.shell h2{max-width:100%}
+main.shell .graffiti{display:none}
+main.shell .card{max-width:100%;padding:20px 16px}
+main.shell .mono,main.shell dt{font-size:11px!important;line-height:1.5}
+main.shell .page-label,main.shell .fixture-meta,main.shell .schedule-status{line-height:1.6;white-space:normal}
+main.shell .section-heading{font-size:23px;flex-wrap:wrap;line-height:1.2}
+main.shell .hero{display:flex!important;flex-direction:column;height:auto!important;min-height:0;padding:0;gap:24px}
+main.shell .hero-copy{position:relative!important;order:0;width:100%!important;padding:12px 0 0!important}
+main.shell .hero h1{font-size:clamp(64px,18vw,104px)!important;line-height:.86!important;width:100%;margin:22px 0}
+main.shell .hero-title-line{white-space:nowrap}
+main.shell .intro{width:100%!important;max-width:390px;font-size:17px;line-height:1.5}
+main.shell .art{display:none;order:1;position:relative!important;width:100%;height:auto!important;min-height:0;overflow:visible}
+main.shell .hero-news{position:static!important;width:100%;padding:0;margin:0}
+main.shell .hero-news-list{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:14px}
+main.shell .hero-news-card{min-height:170px;padding:20px;height:auto}
+main.shell .hero-news-card h3{white-space:normal!important;font-size:22px;line-height:1.25;overflow:visible;display:block;-webkit-line-clamp:unset}
+main.shell .tables,main.shell .players-grid,main.shell .team-statistics,main.shell .career-groups,main.shell .mvp-archive-layout,main.shell .mvp-content,main.shell .match,main.shell .mvp-feature{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:20px}
+main.shell .tables{margin-top:24px}
+main.shell .head-row{flex-wrap:wrap;gap:12px}
+main.shell .table-card,main.shell .season-card,main.shell .statistics-scroll,main.shell .team-statistics-block{overflow:visible!important;min-width:0;width:100%}
+main.shell .statistics-panel{padding:20px 14px}
+main.shell .statistics-formula{white-space:normal;overflow-wrap:anywhere;font-size:14px}
+main.shell .role-table-heading{flex-wrap:wrap;gap:10px}
+main.shell .mobile-card-table{display:block!important;width:100%!important;min-width:0!important;table-layout:auto}
+main.shell .mobile-card-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+main.shell .mobile-card-table tbody{display:grid!important;gap:14px;width:100%}
+main.shell .mobile-card-table tbody tr{display:grid!important;grid-template-columns:minmax(0,1fr)!important;height:auto!important;background:#f5f5f4;border:1px solid #dedddd;border-radius:10px;padding:12px!important;min-width:0;width:100%}
+main.shell .mobile-card-table tbody td{display:flex!important;align-items:center;justify-content:space-between;gap:12px;width:100%!important;min-width:0;min-height:40px;height:auto!important;padding:7px 0!important;border:0!important;text-align:right!important;font-size:16px!important;line-height:1.4;white-space:normal!important;background:transparent!important}
+main.shell .mobile-card-table tbody td:before{content:attr(data-mobile-label);font:400 11px/1.4 'DM Mono',monospace;color:#777;text-align:left;flex:0 1 48%;white-space:normal}
+main.shell .mobile-card-table td a{min-height:44px;display:inline-flex;align-items:center;gap:8px;max-width:100%;font-size:16px!important}
+main.shell .mobile-card-table td img{max-width:48px;max-height:48px;object-fit:cover}
+main.shell .mobile-card-table td .captain-marker{font-size:18px}
+main.shell .mobile-card-table td .ranking-base{margin-left:auto}
+main.shell .mobile-card-table td .ranking-bonus{white-space:nowrap}
+main.shell .player-mini{display:flex!important;gap:16px;align-items:flex-start;padding:20px 16px}
+main.shell .player-mini .player-avatar{width:76px;height:96px;flex-shrink:0}
+main.shell .player-mini h2{font-size:clamp(20px,5vw,28px)!important;margin:0 0 14px;white-space:nowrap}
+main.shell .profile-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+main.shell .profile-stats dd{font-size:23px;margin:4px 0 0}
+main.shell .career-heading{display:flex;flex-wrap:wrap;gap:16px}
+main.shell .career-heading>img{width:80px;height:100px;object-fit:cover}
+main.shell .career-heading>div{flex:1;min-width:0}
+main.shell .career-heading h1{font-size:clamp(22px,5.8vw,32px)!important;white-space:nowrap}
+main.shell .career-heading .career-quote{flex:0 0 100%;margin:0;padding:16px 0 0;border-left:0;border-top:1px solid #ddd;font-size:19px}
+main.shell .career-values{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+main.shell .career-values dd{font-size:25px;overflow-wrap:anywhere}
+main.shell .series-heading{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+main.shell .career-map{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:16px}
+main.shell .career-map>*{min-width:0;white-space:normal}
+main.shell .career-map strong{font-size:20px}
+main.shell .fixture-meta{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+main.shell .fixture-versus{display:flex!important;flex-direction:column;gap:24px;align-items:stretch;margin-top:24px}
+main.shell .fixture-team{width:100%}
+main.shell .fixture-team h2{font-size:25px!important;text-align:left;white-space:normal}
+main.shell .roster{display:flex!important;flex-direction:column;gap:12px;width:100%;padding:0}
+main.shell .roster .filled-slot,main.shell .roster .empty-slot{display:flex!important;flex-direction:row;align-items:center;justify-content:flex-start;gap:12px;min-height:58px;width:100%;font-size:17px!important;text-align:left}
+main.shell .roster .filled-slot img{width:56px!important;height:56px!important}
+main.shell .roster a{min-height:44px;display:inline-flex;align-items:center}
+main.shell .empty-score{transform:none!important;position:static!important;align-self:center;width:100%;padding:10px 0;font-size:42px}
+main.shell .empty-score small,main.shell .empty-score .mono{position:static!important;display:block;white-space:normal}
+main.shell .fixture-mvp{width:100%;margin-top:20px}
+main.shell .mvp-identity{display:flex;gap:16px;flex-wrap:wrap}
+main.shell .mvp-identity img,main.shell .mvp-photo-link img,main.shell .mvp-archive-layout>img{width:120px!important;height:140px!important;object-fit:cover}
+main.shell .mvp-day-stats,main.shell .mvp-performance dl{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px}
+main.shell .mvp-day-stats dd{font-size:23px}
+main.shell .mvp-saying{font-size:22px;max-width:100%;margin:0;line-height:1.4}
+main.shell .mvp-action{align-items:flex-start}
+main.shell .match-metrics{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+main.shell .map-tabs{display:flex!important;flex-wrap:nowrap!important;width:100%;gap:8px}
+main.shell .map-tab{flex:1;min-width:0;min-height:44px;padding:10px 4px!important;font-size:13px!important;white-space:nowrap}
+main.shell .map-result{display:grid;grid-template-columns:minmax(0,1fr);text-align:center;gap:16px;padding:18px}
+main.shell .map-result-team{text-align:center!important;font-size:22px;white-space:normal}
+main.shell .quote{padding:20px 0;min-height:0;gap:18px}
+main.shell .quote p{max-width:none}
+main.shell .score{order:0;padding:20px 0;border-inline:0}
+main.shell .teams{gap:10px;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}
+main.shell .team{font-size:15px;white-space:normal}
+main.shell .news-article{padding:24px 18px}
+main.shell .news-article h1{font-size:32px!important;white-space:normal}
+main.shell .news-body{font-size:18px;line-height:1.6;overflow-wrap:break-word}
+main.shell .mvp-placeholder-body{flex-wrap:wrap;gap:16px}
+main.shell .rules-topbar{margin:16px 0 24px}
+main.shell button,main.shell .button,main.shell .outline,main.shell .news-back,main.shell .back-players,main.shell .match-back{min-height:44px}
+main.shell .news-back,main.shell .back-players,main.shell .match-back{display:inline-flex;align-items:center}
+main.shell .period-menu{max-width:100%}
+@media(prefers-reduced-motion:reduce){.mobile-menu,.mobile-menu nav a,.mobile-menu-toggle span{transition:none!important}}
+}
+@media(max-width:380px){
+body>header .top{gap:8px}body>header .header-season,body>header .header-season-teaser{font-size:17px!important}
+body .shell{width:calc(100% - 24px)!important}main.shell .card{padding:16px 12px}
+main.shell .player-mini{gap:10px}main.shell .player-mini .player-avatar{width:60px;height:80px}
+main.shell .hero h1{font-size:18vw!important}main.shell .mobile-card-table tbody td{font-size:15px!important;gap:8px}
+}
+/* Compact companions are never shown on desktop. */
+.compact-list,.compact-item,.compact-tabs{display:none}
+@media(max-width:768px){
+:root{--mobile-gap:12px;--mobile-row:56px}
+main.shell .compact-source,main.shell .compact-tab-inactive{display:none!important}
+main.shell .compact-list{display:grid;gap:0}
+main.shell .compact-item{display:block;min-width:0;border-bottom:1px solid #ddd;background:transparent}
+main.shell .compact-summary{display:flex;width:100%;min-height:var(--mobile-row);align-items:center;gap:8px;padding:6px 0;border:0;background:none;color:var(--ink);text-align:left;cursor:pointer;font-family:'Roboto Condensed',Arial,sans-serif;touch-action:manipulation}
+main.shell .compact-avatar{width:30px;height:34px;object-fit:cover;border-radius:4px;flex-shrink:0}
+main.shell .compact-rank{font:500 11px 'DM Mono',monospace;color:var(--red);flex-shrink:0}
+main.shell .compact-name{font-size:14px;font-weight:700;white-space:nowrap;min-width:0;flex:1}
+main.shell .compact-primary{display:flex;align-items:center;gap:10px;flex-shrink:0;max-width:47%}
+main.shell .compact-metric{display:flex;flex-direction:column;text-align:right;min-width:0}
+main.shell .compact-metric small{font:400 9px/1.3 'DM Mono',monospace;color:#777}
+main.shell .compact-metric b{font-size:14px;line-height:1.3;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+main.shell .compact-chevron{font-size:17px;color:var(--red);transition:transform .2s}
+main.shell .is-expanded .compact-chevron{transform:rotate(180deg)}
+main.shell .compact-reveal{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .24s ease,opacity .2s}
+main.shell .is-expanded .compact-reveal{grid-template-rows:1fr;opacity:1}
+main.shell .compact-inner{overflow:hidden;min-height:0}
+main.shell .compact-values{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:8px 0 12px;padding:12px;background:#eeeae9;border-radius:6px}
+main.shell .compact-values div{min-width:0}
+main.shell .compact-values dt{font-size:10px!important;color:#777;line-height:1.4}
+main.shell .compact-values dd{margin:3px 0 0;font-size:16px;font-weight:600;overflow-wrap:anywhere}
+main.shell .compact-profile-link{display:flex;align-items:center;min-height:44px;color:var(--red);font-size:14px;text-decoration:none;padding-bottom:8px}
+main.shell .compact-tabs{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:0;background:#e9e5e5;border-radius:24px;padding:3px;margin:0 0 12px;grid-column:1/-1}
+main.shell .compact-tabs button{position:relative;z-index:1;border:0;background:none;min-height:44px;color:#666;font:600 14px 'Roboto Condensed',Arial,sans-serif;cursor:pointer}
+main.shell .compact-tabs button[aria-selected=true]{color:white}
+main.shell .compact-tab-indicator{position:absolute;top:3px;bottom:3px;left:3px;width:calc(50% - 3px);border-radius:22px;background:var(--red);transform:translateX(calc(var(--selected,0) * 100%));transition:transform .2s ease}
+main.shell .compact-tab-panel:not(.compact-tab-inactive){animation:compact-fade .2s ease}
+main.shell .tables{gap:0!important}
+main.shell .players-grid{gap:4px!important}
+main.shell .players-grid>.compact-item{padding:0 8px;background:var(--card);border-radius:6px}
+main.shell .card{padding:16px 12px}
+main.shell .hero{gap:16px}
+main.shell .hero-copy{padding-top:0!important}
+main.shell .hero h1{margin:16px 0}
+main.shell .intro{margin:16px 0}
+main.shell .game-note{margin-top:20px}
+main.shell .match,main.shell .mvp,main.shell .tables,main.shell .season-card{margin-top:16px}
+main.shell .map-tabs{gap:6px;padding:3px;border-radius:24px;background:#e9e5e5}
+main.shell .map-tab{border-radius:22px;border:0;transition:background .18s,color .18s}
+main.shell .team-statistics .compact-list{animation:compact-fade .2s ease}
+main.shell .fixture-versus{gap:16px;margin-top:16px}
+main.shell .roster{gap:4px}
+main.shell .roster .filled-slot,main.shell .roster .empty-slot{min-height:44px;font-size:15px!important}
+main.shell .roster .filled-slot img{width:36px!important;height:36px!important}
+main.shell .career-map-list{gap:0}
+main.shell .career-map-list .compact-name{flex:0 0 auto;font-size:12px}
+main.shell .career-map-list .compact-primary{max-width:none;flex:1;justify-content:flex-end}
+main.shell .career-map-list .compact-metric:first-child{max-width:135px}
+main.shell button:active,main.shell .compact-profile-link:active{transform:scale(.97)}
+main.shell button:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+@keyframes compact-fade{from{opacity:.35;transform:translateY(3px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){main.shell .compact-reveal,main.shell .compact-chevron,main.shell .compact-tab-indicator{transition:none}main.shell .compact-tab-panel,main.shell .compact-list{animation:none!important}}
+}
+@media(max-width:380px){main.shell .compact-summary{gap:5px}main.shell .compact-name{font-size:12px}main.shell .compact-avatar{width:26px;height:30px}main.shell .compact-primary{gap:6px}main.shell .compact-metric b{font-size:12px}}
+
+@media(max-width:768px){
+ .mobile-menu nav a{justify-content:center;text-align:center}
+}

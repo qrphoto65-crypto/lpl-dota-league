@@ -1,0 +1,120 @@
+/* Shared action alignment. */
+main.shell .hero .button{display:inline-flex;align-items:center;justify-content:center;line-height:1.2;box-sizing:border-box;min-height:44px;padding-top:14px;padding-bottom:14px}
+main.shell .rules-topbar.rules-after-table{display:flex;justify-content:flex-end;margin:24px 0 0!important}
+.match-captain-quotes{margin-top:24px;padding:24px}
+.match-captain-quotes h2{display:flex;align-items:center;gap:12px;font-size:24px;margin:0 0 20px}
+.captain-quotes-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.captain-quotes-grid blockquote{margin:0;padding:0 0 0 16px;border-left:2px solid var(--red);font-size:20px;font-style:italic;line-height:1.5}
+.captain-quotes-grid a{display:inline-flex;align-items:center;min-height:44px;font-size:13px;font-style:normal;color:var(--red);text-decoration:none}
+/* Roster showcase: original player data and profile links. */
+main.shell .players-carousel{display:flex!important;gap:20px!important;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:12px;padding:14px 12px 24px;margin-inline:-12px;scrollbar-width:thin;scrollbar-color:var(--red) #e7e3e3;overscroll-behavior-x:contain}
+main.shell .players-carousel .player-mini{display:flex!important;flex-direction:column;flex:0 0 min(320px,75vw);width:min(320px,75vw);min-width:0;padding:22px;gap:18px;scroll-snap-align:center;color:inherit;text-decoration:none;transform:scale(.97);opacity:.86;transition:transform .22s,opacity .22s,box-shadow .22s;animation:roster-appear .4s backwards;animation-delay:calc(var(--player-index,0) * 35ms)}
+main.shell .players-carousel .player-mini.is-current,main.shell .players-carousel .player-mini:focus-visible{transform:scale(1);opacity:1;box-shadow:0 8px 25px #80283e18}
+main.shell .players-carousel .player-avatar{width:100%!important;height:250px!important;object-fit:cover;border-radius:8px;flex-shrink:0}
+main.shell .players-carousel .player-mini-content{width:100%}
+main.shell .players-carousel h2{font-size:30px!important;line-height:1.2;white-space:nowrap;margin:0 0 18px}
+main.shell .players-carousel .profile-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:0}
+main.shell .players-carousel dt{font-size:11px;line-height:1.4}
+main.shell .players-carousel dd{font-size:25px;margin:4px 0 0}
+.carousel-controls{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin-top:12px}
+.carousel-controls button{width:44px;height:44px;border:1px solid #d8c8cd;border-radius:50%;background:#fafafa;color:var(--red);font-size:22px;cursor:pointer;transition:background .2s,transform .2s}
+.carousel-controls button:disabled{opacity:.35;cursor:default}
+.carousel-controls button:active{transform:scale(.97)}
+.carousel-position{font:400 12px 'DM Mono',monospace;color:#777;min-width:62px;text-align:center}
+@media(hover:hover){main.shell .players-carousel .player-mini:hover{transform:scale(1);opacity:1}}
+@keyframes roster-appear{from{opacity:0;translate:0 8px}to{opacity:.86;translate:0 0}}
+@media(max-width:768px){
+main.shell .home-match-clickable .quote{display:none!important}
+main.shell .home-match-clickable .score{width:100%;padding:8px 0;border:0}
+main.shell .home-match-clickable .teams{display:flex!important;flex-direction:column;align-items:center;gap:10px;margin:18px 0}
+main.shell .home-match-clickable .team{font-size:21px;text-align:center}
+main.shell .home-match-clickable .score-num{display:flex;align-items:center;justify-content:center;min-height:56px;font-size:44px;line-height:1.2}
+main.shell .fixture-versus{display:flex!important;flex-direction:column!important}
+main.shell .fixture-versus .empty-score{transform:none!important;position:static!important}
+main.shell .rules-topbar.rules-after-table{margin-top:20px!important}
+main.shell .match-captain-quotes{margin-top:16px}
+main.shell .captain-quotes-grid{grid-template-columns:1fr;gap:20px}
+main.shell .players-carousel{gap:12px!important;padding-bottom:18px}
+main.shell .players-carousel .player-mini{flex-basis:82%;width:82%;padding:18px;gap:16px}
+main.shell .players-carousel .player-avatar{height:220px!important}
+main.shell .players-carousel h2{font-size:27px!important}
+main.shell .players-carousel .profile-stats{gap:14px}
+.carousel-controls{margin-top:4px}
+}
+@media(prefers-reduced-motion:reduce){main.shell .players-carousel{scroll-behavior:auto}main.shell .players-carousel .player-mini{animation:none;transition:none}.carousel-controls button{transition:none}}
+/* Single-card carousel: neighbouring slides cannot peek through the viewport. */
+main.shell .players-carousel{display:grid!important;grid-template-columns:minmax(0,1fr);gap:0!important;max-width:430px;width:100%;margin:0 auto;padding:0;overflow:hidden;scroll-snap-type:none;border-radius:12px;touch-action:pan-y}
+main.shell .players-carousel .player-mini{grid-area:1/1;width:100%!important;max-width:100%;margin:0;flex-basis:auto;transform:none!important;opacity:0;visibility:hidden;pointer-events:none;animation:none;transition:opacity .4s cubic-bezier(.4,0,.2,1),visibility .4s}
+main.shell .players-carousel .player-mini.is-current{opacity:1;visibility:visible;pointer-events:auto;box-shadow:none}
+main.shell .players-carousel .player-mini:not(.is-current):hover{opacity:0}
+.players-page .carousel-controls{max-width:430px;margin:16px auto 0;justify-content:center}
+main.shell .rules-topbar.rules-before-table{margin:20px 0 24px!important;display:flex;justify-content:flex-end}
+main.shell .rules-before-table + .card{margin-top:0!important}
+@media(max-width:768px){
+main.shell .rules-topbar.rules-before-table{margin:16px 0 20px!important}
+main.shell .matches-page .roster{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;gap:12px!important;overflow-x:auto;max-width:100%;width:100%;padding:6px 0 10px;scroll-snap-type:x proximity;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:var(--red) #e7e3e3}
+main.shell .matches-page .roster .filled-slot,main.shell .matches-page .roster .empty-slot{display:flex!important;flex-direction:row!important;flex:0 0 auto;width:auto!important;min-height:44px;gap:6px!important;white-space:nowrap;scroll-snap-align:start;font-size:13px!important}
+main.shell .matches-page .roster .filled-slot img{width:30px!important;height:30px!important;flex-shrink:0}
+main.shell .matches-page .roster .empty-slot{min-width:94px;padding:8px}
+main.shell .matches-page .roster .captain-marker{font-size:16px}
+main.shell .matches-page .fixture-team{min-width:0;max-width:100%}
+}
+@media(prefers-reduced-motion:reduce){main.shell .players-carousel .player-mini{transition:none}}
+/* Swipe transitions are handled as directional slides, without visible controls. */
+main.shell .players-carousel .player-mini{transition:none;cursor:grab}
+main.shell .players-carousel .player-mini:active{cursor:grabbing}
+main.shell .players-carousel .player-mini img{user-select:none;-webkit-user-drag:none}
+main.shell .players-carousel:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+
+.carousel-player-quote{display:none}
+@media(max-width:768px){
+ main.shell .players-carousel .carousel-player-quote{display:block;width:100%;margin:0;padding:16px 0 0;border-top:1px solid rgba(128,40,62,.18);font-family:'Roboto Condensed',Arial,sans-serif;font-size:17px;font-weight:400;font-style:italic;line-height:1.5;color:#666}
+}
+
+/* Preserve the entire player photo in the carousel on every screen. */
+main.shell .players-carousel .player-avatar{object-fit:contain!important;object-position:center;background:#eeeceb}
+
+/* Larger roster cards with uncropped, naturally sized photography. */
+main.shell .players-carousel{max-width:520px}
+.players-page .carousel-controls{max-width:520px}
+main.shell .players-carousel .player-mini{padding:20px;gap:20px}
+main.shell .players-carousel .player-avatar{display:block;width:100%!important;height:auto!important;max-height:none;aspect-ratio:auto;object-fit:contain!important;background:transparent!important;border:0}
+@media(max-width:768px){
+ main.shell .players-carousel{max-width:100%}
+ main.shell .players-carousel .player-mini{padding:12px;gap:18px}
+ main.shell .players-carousel .player-avatar{height:auto!important;background:transparent!important}
+ main.shell .players-carousel .player-mini-content{padding:0 8px 6px}
+ main.shell .players-carousel .carousel-player-quote{padding:16px 8px 4px}
+}
+/* Mobile career summaries: equal rows with unbroken labels and values. */
+@media(max-width:768px){
+ main.shell.career-profile .career-note{display:none!important}
+ main.shell.career-profile .career-group{padding:18px 14px}
+ main.shell.career-profile .career-values{display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:minmax(56px,auto);gap:8px;margin:0}
+ main.shell.career-profile .career-values>div{display:flex;align-items:center;justify-content:space-between;gap:12px;min-width:0;min-height:56px;padding:10px 12px;border-radius:6px;background:rgba(128,40,62,.035)}
+ main.shell.career-profile .career-values dt{font-size:11px!important;line-height:1.3;white-space:nowrap;word-break:normal;overflow-wrap:normal;letter-spacing:0;flex-shrink:0}
+ main.shell.career-profile .career-values dd{font-size:25px;line-height:1.2;white-space:nowrap;word-break:normal;overflow-wrap:normal;margin:0;text-align:right;font-variant-numeric:tabular-nums}
+}
+@media(max-width:380px){
+ main.shell.career-profile .career-values>div{padding:10px 8px;gap:8px}
+ main.shell.career-profile .career-values dt{font-size:10px!important}
+ main.shell.career-profile .career-values dd{font-size:22px}
+}
+
+.carousel-dots{display:none}
+@media(max-width:768px){
+ .players-page .carousel-dots{display:flex;justify-content:center;align-items:center;gap:8px;min-height:32px;margin:12px auto 0}
+ .players-page .carousel-dots span{display:block;width:6px;height:6px;border-radius:50%;background:#d5c9cc;transition:background 180ms ease,transform 180ms ease}
+ .players-page .carousel-dots span.is-active{background:var(--red);transform:scale(1.35)}
+}
+@media(prefers-reduced-motion:reduce){.players-page .carousel-dots span{transition:none}}
+
+@media(max-width:768px){
+ main.shell.statistics-page .compact-values .compact-points-current,main.shell.statistics-page .compact-values .compact-points-potential{padding:12px 10px;border-radius:6px}
+ main.shell.statistics-page .compact-values .compact-points-current{background:#f2e3e7}
+ main.shell.statistics-page .compact-values .compact-points-current dd{color:var(--red);font-size:24px;font-weight:700}
+ main.shell.statistics-page .compact-values .compact-points-potential{background:#faf9f8;border:1px solid #cfa9b3}
+ main.shell.statistics-page .compact-values .compact-points-potential dd{color:var(--ink);font-size:24px;font-weight:700}
+ main.shell .rules-topbar.rules-before-table.mobile-rules-bottom{position:static!important;float:none!important;transform:none!important;width:100%;margin:20px 0 0!important;justify-content:flex-end;clear:both}
+ main.shell .mobile-rules-bottom .rules-text-link{min-height:44px;font-size:13px;padding:10px 14px}
+}
