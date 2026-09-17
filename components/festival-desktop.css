@@ -1,0 +1,33 @@
+.festival-banner,.festival-stamp{display:none}
+@media(min-width:1024px){
+ 
+ .festival-banner i{font-style:normal;font-size:17px;color:#ad7285}
+ body>header{border-bottom:1px solid #80283e20}
+ main.shell{position:relative}
+ 
+ 
+ 
+ main.shell .hero-copy:after{content:'10 ИГРОКОВ / ОДИН ЧЕМПИОН';display:block;width:max-content;max-width:100%;margin-top:24px;padding:9px 13px;border:1px solid #a26778;outline:1px dashed #c4a0ac;outline-offset:4px;border-radius:2px;color:#80283e;font:500 10px/1.4 'DM Mono',monospace;letter-spacing:.08em;transform:rotate(-3deg)}
+ main.shell .page-label:after{content:'✦';display:inline-block;margin-left:14px;color:#a85f75;font-size:18px}
+ main.shell .hero-news-heading:after{content:'LPL PRESS';margin-left:auto;padding:4px 8px;border:1px solid #bc8d9b;border-radius:2px;font:500 9px 'DM Mono',monospace;transform:rotate(3deg)}
+ main.shell .hero-news-heading{display:flex;align-items:center}
+ main.shell .home-match-clickable:after{content:'MAIN EVENT';position:absolute;top:-13px;right:24px;padding:6px 12px;background:#80283e;color:#fffaf8;border:2px solid #fffaf8;box-shadow:0 2px 0 #80283e44;transform:rotate(3deg);font:500 10px 'DM Mono',monospace;letter-spacing:.12em;pointer-events:none}
+ main.shell .mvp{position:relative}
+ main.shell .mvp:after{content:'STAR OF THE DAY';position:absolute;right:25px;top:-12px;transform:rotate(-3deg);padding:5px 12px;border:1px solid #a56c7c;background:#f7eff1;color:#80283e;font:500 9px 'DM Mono',monospace;letter-spacing:.12em;pointer-events:none}
+ main.shell .fixture-meta{background:repeating-linear-gradient(135deg,#80283e03 0 8px,transparent 8px 16px)}
+ main.shell .fixture-link{transition:box-shadow .25s,border-color .25s}
+ main.shell .fixture-link:hover{border-color:#a55a70;box-shadow:0 14px 30px #80283e14}
+ main.shell .news-article:after{content:'LPL / РЕДАКЦИЯ';display:block;width:max-content;margin:24px 0 0 auto;padding:8px 12px;border:2px solid #a66d7e;color:#a66d7e;transform:rotate(-5deg);font:500 10px 'DM Mono',monospace;letter-spacing:.12em}
+ main.shell .show-ticket-footer{position:relative;border-bottom:1px dashed #c6b2b9;padding:18px 10px;background:linear-gradient(90deg,#80283e04,transparent,#80283e04)}
+ main.shell .show-ticket-footer:before,main.shell .show-ticket-footer:after{content:'';position:absolute;top:calc(50% - 7px);width:14px;height:14px;background:#f5f5f4;border:1px solid #c6b2b9;border-radius:50%}
+ main.shell .show-ticket-footer:before{left:-7px}main.shell .show-ticket-footer:after{right:-7px}
+ main.shell .players-carousel .player-mini:after{content:'LPL • PLAYER PASS';display:block;margin-top:auto;padding-top:12px;color:#9c7984;font:400 8px 'DM Mono',monospace;letter-spacing:.12em}
+ .festival-stamp{display:block;position:fixed;right:12px;bottom:22px;writing-mode:vertical-rl;color:#a47886;opacity:.65;font:400 9px 'DM Mono',monospace;letter-spacing:.18em;pointer-events:none;z-index:0}
+}
+@media(min-width:1024px) and (prefers-reduced-motion:no-preference){
+ @keyframes festival-arrival{from{opacity:0;translate:0 -5px}to{opacity:1;translate:0 0}}
+ 
+}
+
+/* Shared page-title treatment, matching the Matches page. */
+main.shell h1{font-style:italic}

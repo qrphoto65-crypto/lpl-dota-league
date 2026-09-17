@@ -1,0 +1,28 @@
+/* League as a live show: restrained ticket and programme details. */
+main.shell .news-body p:first-child::first-letter{float:none;initial-letter:normal;-webkit-initial-letter:normal;font:inherit;line-height:inherit;letter-spacing:inherit;margin:0;padding:0;color:inherit}
+/* The season label reads like a small admission stamp. */
+body>header .header-season{border-bottom:1px dashed rgba(128,40,62,.35);padding-bottom:3px}
+main.shell .page-label{border-left:3px solid var(--red);padding-left:12px}
+main.shell .page-label>.redbar{display:none}
+main.shell .section-heading .redbar,main.shell .role-table-heading .redbar{background:repeating-linear-gradient(135deg,var(--red) 0 4px,#bd7e90 4px 6px);box-shadow:none}
+/* Perforated rules evoke the fold of a printed programme. */
+main.shell .season-card thead th,main.shell .table-card thead th,main.shell .season-statistics thead th,main.shell .future-player-stats thead th{border-bottom:1px dashed #c5a8b2}
+main.shell .career-history,main.shell .statistics-panel{border-top:3px solid var(--red)}
+main.shell .career-series+.career-series{border-top:1px dashed #c8b2ba;padding-top:24px}
+main.shell .news-article .page-label{border-bottom-style:dashed}
+main.shell .mvp-archive-placeholder{border-style:dashed;border-color:#c9b5bc}
+/* A quiet ticket edge below portraits, keeping the photos untouched. */
+main.shell .players-carousel .player-mini-content{border-top:1px dashed rgba(128,40,62,.3)}
+main.shell .career-heading .career-quote{border-top:1px dashed #cbb4bc}
+main.shell .news-lead-quote,main.shell .match-captain-quotes{border-bottom:1px dashed rgba(128,40,62,.25)}
+main.shell .show-ticket-footer{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:32px 0 24px;padding:14px 0;border-top:1px dashed #c6b2b9;color:#8c6974;font:400 10px/1.4 'DM Mono',monospace;letter-spacing:.12em}
+.show-ticket-footer .show-ticket-mark{display:flex;align-items:center;gap:10px}
+.show-ticket-footer .show-ticket-mark:before{content:'';display:block;width:36px;height:20px;background:repeating-linear-gradient(90deg,#80283e99 0 1px,transparent 1px 3px,#80283e99 3px 5px,transparent 5px 7px);opacity:.65}
+.show-ticket-footer .show-ticket-star{color:var(--red);font-size:14px}
+@media(max-width:768px){
+ main.shell .compact-item{border-bottom-style:dashed}
+ main.shell .compact-values{border-bottom:1px dashed rgba(128,40,62,.18)}
+ main.shell .show-ticket-footer{margin:24px 0 16px;font-size:9px;letter-spacing:.06em;gap:10px}
+ .show-ticket-footer .show-ticket-mark:before{width:25px;height:16px}
+ main.shell .career-series+.career-series{padding-top:18px}
+}
