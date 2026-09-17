@@ -52,7 +52,7 @@
  const rules=document.querySelector('.statistics-page .rules-topbar,.leaderboard-page .rules-topbar');
  if(rules){
   const home=document.createComment('desktop regulation position');rules.before(home);
-  function placeRules(){if(mq.matches){document.querySelector('main').append(rules);rules.classList.add('mobile-rules-bottom');}else{home.after(rules);rules.classList.remove('mobile-rules-bottom');}}
+  function placeRules(){if(mq.matches){home.after(rules);rules.classList.add('mobile-rules-icon');}else{home.after(rules);rules.classList.remove('mobile-rules-icon');}}
   mq.addEventListener('change',placeRules);placeRules();
  }
  function update(){if(!mq.matches)return;document.querySelectorAll('main table').forEach(renderTable);}
