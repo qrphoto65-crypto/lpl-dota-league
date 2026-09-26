@@ -128,7 +128,9 @@ class LeagueApi {
       if (value === null) query.set(key, 'is.null');
       else {
         const raw = typeof value === 'object' ? JSON.stringify(value) : String(value);
-        query.set(key, `eq.${JSON.stringify(raw)}`);
+        // A standalone eq filter takes the raw value, not a quoted list item.
+        // URLSearchParams handles URL escaping (including &, + and newlines).
+        query.set(key, `eq.${raw}`);
       }
     }
     const result = await this.request(`/rest/v1/${table}?${query}`, {
