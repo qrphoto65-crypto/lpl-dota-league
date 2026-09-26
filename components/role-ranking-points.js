@@ -1,5 +1,5 @@
 (() => {
- const bonuses = [625, 525, 425, 325, 275];
+ const bonuses = window.LPL_SCORING.nominationPoints;
  const format = value => new Intl.NumberFormat('ru-RU').format(value);
  document.querySelectorAll('.role-statistics tbody').forEach(body => {
   function update() {

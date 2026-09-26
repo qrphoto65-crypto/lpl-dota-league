@@ -2,7 +2,7 @@
  const mq=matchMedia('(max-width:768px)'), records=new Map();let serial=0;
  const el=(tag,cls,text)=>{const n=document.createElement(tag);n.className=cls;if(text!==undefined)n.textContent=text;return n;};
  const clean=n=>n.textContent.replace(/\s+/g,' ').trim();
- const avatar=link=>{const slug=link?.getAttribute('href')?.match(/players\/([^/#]+)\.html/)?.[1];return slug?new URL('../assets/'+slug+'.jpg',new URL('components/mobile-compact.js',document.querySelector('script[src$="mobile-compact.js"]').src)).href:null;};
+ const avatar=link=>{const slug=link?.getAttribute('href')?.match(/players\/([^/#]+)\.html/)?.[1];return slug?new URL('../'+(window.LPL_PLAYERS?.[slug]?.avatar||'assets/'+slug+'.jpg'),new URL('components/mobile-compact.js',document.querySelector('script[src$="mobile-compact.js"]').src)).href:null;};
  function item(name,img,primary,fields,href,rank){
   const root=el('div','compact-item'),button=el('button','compact-summary');button.type='button';button.setAttribute('aria-expanded','false');
   const panel=el('div','compact-reveal'),inner=el('div','compact-inner');panel.id='compact-details-'+(++serial);button.setAttribute('aria-controls',panel.id);panel.inert=true;

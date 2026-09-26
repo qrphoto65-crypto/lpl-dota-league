@@ -1,0 +1,39 @@
+{
+  "activeSeasonId": "season-1",
+  "seasons": [
+    {
+      "id": "season-1",
+      "label": "Season one"
+    }
+  ],
+  "scoring": {
+    "mapWin": 150,
+    "mvp": 225,
+    "maxMvpAwards": 5,
+    "minimumRoleMaps": 3,
+    "nominationPoints": [
+      650,
+      525,
+      425,
+      325,
+      275
+    ],
+    "regulationNominationPoints": [
+      650,
+      525,
+      425,
+      325,
+      275
+    ],
+    "core": {
+      "kda": 150,
+      "gpm": 1.2,
+      "damage": 0.01
+    },
+    "support": {
+      "kda": 150,
+      "supportGold": 0.8,
+      "wardsDestroyed": 80
+    }
+  }
+}

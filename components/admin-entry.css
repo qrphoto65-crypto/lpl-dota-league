@@ -1,0 +1,9 @@
+/* A real link outside the decorative aria-hidden ticket footer. */
+main.shell .organizer-access{display:flex;justify-content:flex-end;margin:0 0 28px;padding:0;clear:both}
+main.shell .organizer-entry{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;max-width:100%;padding:10px 16px;border:1px solid #80283e33;border-radius:10px;background:#fff8;color:#80283e;text-decoration:none;font:500 13px/1.3 'Roboto Condensed',Arial,sans-serif;letter-spacing:.025em;transition:background .2s ease,box-shadow .2s ease,transform .2s ease}
+.organizer-entry svg{width:17px;height:17px;flex:none}.organizer-entry .entry-arrow{margin-left:8px;transition:transform .2s ease}
+@media(hover:hover){main.shell .organizer-entry:hover{background:#fff;box-shadow:0 5px 18px #80283e12;transform:translateY(-1px)}.organizer-entry:hover .entry-arrow{transform:translateX(3px)}}
+main.shell .organizer-entry:focus-visible{outline:2px solid #80283e;outline-offset:4px}main.shell .organizer-entry:active{transform:scale(.98)}
+@media(max-width:768px){main.shell .organizer-access{justify-content:center;margin-bottom:20px}main.shell .organizer-entry{font-size:13px;padding:10px 18px}}
+@media(prefers-reduced-motion:reduce){main.shell .organizer-entry,.organizer-entry .entry-arrow{transition:none;transform:none!important}}
+main.shell .organizer-access{gap:12px;flex-wrap:wrap}main.shell .participant-entry{background:#80283e;color:white}.match-vote-entry{margin:28px 0;padding:24px;border:1px solid #80283e33;border-top:3px solid #80283e;border-radius:12px;background:#fff9}.match-vote-entry>.mono{color:#80283e;font-size:12px;letter-spacing:.1em}.match-vote-entry h2{margin:12px 0;font-size:28px}.match-vote-entry p{margin:10px 0 16px;max-width:650px;font-size:16px;line-height:1.5}@media(max-width:768px){.match-vote-entry{padding:20px}.match-vote-entry h2{font-size:24px}.match-vote-entry p{font-size:15px}}

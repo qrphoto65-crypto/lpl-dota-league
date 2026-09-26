@@ -25,9 +25,9 @@ function show(index, focus=false){
 
  tabs.querySelectorAll('button').forEach((b,i)=>{b.setAttribute('aria-selected',String(i===index));b.tabIndex=i===index?0:-1;});
  host.setAttribute('aria-labelledby','map-tab-'+index);
- status.textContent='КАРТА '+map.number+' · '+map.duration+' · ДЕМО-ДАННЫЕ';
+ status.textContent='КАРТА '+map.number+' · '+map.duration+(data.demo?' · ДЕМО-ДАННЫЕ':'');
  host.querySelectorAll('.team-statistics-block').forEach((block,i)=>{
-  block.querySelector('caption').textContent='КАРТА '+map.number+' · ДЕМО-ДАННЫЕ';
+  block.querySelector('caption').textContent='КАРТА '+map.number+(data.demo?' · ДЕМО-ДАННЫЕ':'');
   const body=block.querySelector('tbody');body.replaceChildren();
   map.teams[i].players.forEach(player=>{
    const row=document.createElement('tr'),name=document.createElement('td'),link=document.createElement('a');
