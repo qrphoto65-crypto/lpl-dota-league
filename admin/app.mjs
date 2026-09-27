@@ -211,7 +211,7 @@ function renderEditor() {
       state.records[section] = state.records[section].map(r => r.id === record.id ? saved : r).sort((a,b) => a.display_order-b.display_order || a.id.localeCompare(b.id));
       state.dirty=false;
       renderList(); renderEditor();
-      message('Сохранено в базе. На публичном сайте изменения появятся после его подключения.');
+      message(section === 'players' ? 'Профиль сохранён. Обновите страницу сайта, чтобы увидеть изменения.' : 'Новость сохранена в базе. Публичная лента пока не подключена.');
     } catch(error) {message(error.message,true);}
     finally {busy(false);}
   });
