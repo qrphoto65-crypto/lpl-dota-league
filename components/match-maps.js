@@ -2,6 +2,9 @@
 const source = document.querySelector('#match-map-data');
 if (!source) return;
 const data = JSON.parse(source.textContent);
+let currentMap=0;
+const liveName=p=>window.LPL_PLAYERS?.[p.slug]?.nickname||p.nick;
+const liveTeam=team=>{const captain=team.players.find(p=>p.captain);return captain?'TEAM '+liveName(captain):team.name;};
 const host = document.querySelector('[data-map-statistics]');
 if (!host) return;
 const count = data.score.reduce((sum, wins) => sum + wins, 0);
@@ -13,13 +16,14 @@ const result = document.createElement('div'); result.className='map-result'; res
 host.before(tabs,status,result); host.id='map-statistics-panel';host.setAttribute('role','tabpanel');
 const format = value => new Intl.NumberFormat('ru-RU').format(value);
 function show(index, focus=false){
+ currentMap=index;
  const map=data.maps[index];
 
  result.replaceChildren();
  const kills = map.teams.map(team => team.players.reduce((sum, player) => sum + Number(player.kda.split('/')[0]), 0));
  map.teams.forEach((team, teamIndex) => {
   if(teamIndex === 1){const score=document.createElement('div');score.className='map-kill-score';score.textContent=kills[0]+' : '+kills[1];const label=document.createElement('small');label.textContent='УБИЙСТВА';score.append(label);result.append(score);}
-  const item=document.createElement('div');item.className='map-result-team'+(map.winnerTeamIndex===teamIndex?' is-winner':'');item.textContent=team.name;
+  const item=document.createElement('div');item.className='map-result-team'+(map.winnerTeamIndex===teamIndex?' is-winner':'');item.textContent=liveTeam(team);
   const outcome=document.createElement('small');outcome.textContent=Number.isInteger(map.winnerTeamIndex)?(map.winnerTeamIndex===teamIndex?'ПОБЕДА НА КАРТЕ':'ПОРАЖЕНИЕ'):'РЕЗУЛЬТАТ УТОЧНЯЕТСЯ';item.append(outcome);result.append(item);
  });
 
@@ -31,7 +35,7 @@ function show(index, focus=false){
   const body=block.querySelector('tbody');body.replaceChildren();
   map.teams[i].players.forEach(player=>{
    const row=document.createElement('tr'),name=document.createElement('td'),link=document.createElement('a');
-   link.className='player-name-link';link.href='../players/'+player.slug+'.html';link.textContent=player.nick;name.append(link);
+   link.className='player-name-link';link.href='../players/'+player.slug+'.html';link.textContent=liveName(player);name.append(link);
    if(player.captain){const star=document.createElement('span');star.className='captain-marker';star.setAttribute('role','img');star.setAttribute('aria-label','Капитан');star.textContent='★';name.append(' ',star);}
    row.append(name);
    [player.hero,player.kda,format(player.networth),format(player.damage),format(player.received)].forEach((v,j)=>{const cell=document.createElement('td');cell.textContent=v;if(j===0)cell.className='hero-cell';row.append(cell);});body.append(row);
@@ -52,6 +56,7 @@ function openFromUrl(){
 }
 openFromUrl();
 window.addEventListener('load',()=>{if(location.hash.startsWith('#match-statistics')) document.querySelector('#match-statistics').scrollIntoView({block:'start',behavior:'instant'});},{once:true});
+window.addEventListener('lpl:players-updated',()=>show(currentMap));
 window.addEventListener('popstate',openFromUrl);
 window.addEventListener('hashchange',openFromUrl);
 })();
